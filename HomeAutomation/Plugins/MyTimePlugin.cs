@@ -13,14 +13,10 @@ public class MyTimePlugin
     public DateTimeOffset Time() => DateTimeOffset.Now;
 }
 
-public class Def
+public class Def(string data)
 {
-    public string Data { get; private set; }
-    public string AnotherData { get; private set; }
-    public Def(string data)
-    {
-        Data = data;
-    }
+    public string Data { get; private set; } = data;
+    public string? AnotherData { get; private set; }
 
     public void Test(string input)
     {
